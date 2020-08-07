@@ -11,9 +11,9 @@ const userRoutes = require('./routes/user');
 
 mongoose.connect(
     `mongodb+srv://${process.env.MONGO_DB_USER}:${process.env.MONGO_DB_PASSWORD}@cluster0.ssrhj.mongodb.net/${process.env.MONGO_DB_DATABASE}?retryWrites=true&w=majority`, 
-    {useNewUrlParser: true, useUnifiedTopology: true}
+    {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true}
 ).then(() => {
-    console.log('database successfully connect!');
+    console.log('database connect successfully!');
 });
 
 app.use('/api', userRoutes);
