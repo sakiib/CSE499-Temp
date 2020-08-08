@@ -18,3 +18,27 @@ Content-Type: application/json
     "email": "sakib@gmail.com",
     "password": "sakib12345"
 }
+
+###
+
+POST http://localhost:5000/api/admin/signup
+Content-Type: application/json
+
+{
+    "firstName": "nova",
+    "lastName": "khan", 
+    "email": "novakhan@gmail.com", 
+    "password": "novapassword",
+    "contactNumber": "1234566"
+}
+
+###
+
+POST http://localhost:5000/api/admin/signin
+Content-Type: application/json
+
+{
+    "email": "novakhan@gmail.com", 
+    "password": "novapassword"
+}
+

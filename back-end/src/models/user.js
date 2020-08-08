@@ -51,7 +51,7 @@ userSchema.virtual('password')
 
 userSchema.virtual('fullName')
 .get(function() {
-    `${this.firstName} + ${this.lastName}`;
+    return `${this.firstName}  ${this.lastName}`;
 });
 
 userSchema.methods = {
