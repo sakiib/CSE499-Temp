@@ -14,7 +14,7 @@ mongoose.connect(
     `mongodb+srv://${process.env.MONGO_DB_USER}:${process.env.MONGO_DB_PASSWORD}@cluster0.ssrhj.mongodb.net/${process.env.MONGO_DB_DATABASE}?retryWrites=true&w=majority`, 
     {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true}
 ).then(() => {
-    console.log('database connected successfully!');
+    console.log('mongoDB database connected successfully!');
 });
 
 app.use('/api', authRoutes);
