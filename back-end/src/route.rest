@@ -51,4 +51,36 @@ Content-Type: application/json
     "password": "123456"
 }
 
+###
+POST http://localhost:5000/api/category/create
+Content-Type: application/json
+
+{
+    "name": "Fruits"
+}
+
+###
+POST http://localhost:5000/api/category/create
+Content-Type: application/json
+
+{
+    "name": "Vegetables"
+}
+
+###
+POST http://localhost:5000/api/category/create
+Content-Type: application/json
+
+{
+    "name": "Dairy"
+}
+
+###
+POST http://localhost:5000/api/category/create
+Content-Type: application/json
+
+{
+    "name": "Homemade"
+}
+
 
