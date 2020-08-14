@@ -56,7 +56,7 @@ POST http://localhost:5000/api/category/create
 Content-Type: application/json 
 
 {
-    "name": "TestCategory"
+    "name": "AnotherCategory"
 }
 
 ###

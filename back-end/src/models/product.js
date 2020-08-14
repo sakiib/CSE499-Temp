@@ -40,7 +40,7 @@ const productSchema = new mongoose.Schema({
             review: String
         }
     ],
-    catagory: {
+    category: {
         type: mongoose.Schema.Types.ObjectId, 
         ref: 'Category',
         required: true

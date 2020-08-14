@@ -3,8 +3,7 @@ const shortid = require('shortid');
 const slugify = require('slugify');
 
 exports.createProduct = (req, res) => {
-    res.status(200).json({ file: req.files, body: req.body });
-    const {name, price, description, category, quantity, createdBy } = req.body;
+    const { name, price, description, category, quantity, createdBy } = req.body;
     let productPictures = [];
     if (req.files.length > 0) {
         productPictures = req.files.map(file => {
