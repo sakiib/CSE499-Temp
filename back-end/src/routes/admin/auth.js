@@ -9,7 +9,7 @@ const { signup, signin } = require('../../controller/admin/auth');
 router.post('/admin/signin', validateSigninRequest, isRequestValidated, signin);
 
 // @route POST /api/admin/signup
-// @desc signin admin
+// @desc signup admin
 // @access Admin
 router.post('/admin/signup', validateSignupRequest, isRequestValidated, signup);
 
