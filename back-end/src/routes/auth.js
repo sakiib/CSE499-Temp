@@ -3,6 +3,9 @@ const router = express.Router();
 const { validateSignupRequest, isRequestValidated, validateSigninRequest } = require('../validators/auth');
 const { signup, signin } = require('../controller/auth');
 
+// @route POST /api/signup
+// @desc POST a signup request
+// @access User
 router.post('/signup', validateSignupRequest, isRequestValidated, signup);
 
 router.post('/signin', validateSigninRequest, isRequestValidated, signin);
