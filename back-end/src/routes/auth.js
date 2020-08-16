@@ -4,10 +4,13 @@ const { validateSignupRequest, isRequestValidated, validateSigninRequest } = req
 const { signup, signin } = require('../controller/auth');
 
 // @route POST /api/signup
-// @desc POST a signup request
+// @desc POST a user signup request
 // @access User
 router.post('/signup', validateSignupRequest, isRequestValidated, signup);
 
+// @route POST /api/signin
+// @desc POST a user signin request
+// @access User
 router.post('/signin', validateSigninRequest, isRequestValidated, signin);
 
 module.exports = router;
