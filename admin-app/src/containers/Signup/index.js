@@ -50,7 +50,7 @@ const Signup = (props) => {
                             type="password"
                             onChange={() => {}}
                         />
-                        <Button variant="primary" type="submit">
+                        <Button variant="primary btn-block" type="submit">
                             Submit
                         </Button>
                     </Form>
