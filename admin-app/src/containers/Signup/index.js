@@ -18,6 +18,7 @@ const Signup = (props) => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const auth = useSelector(state => state.auth);
+  const user = useSelector(state => state.user);
   const dispatch = useDispatch();
   
   const userSignup = (e) => {
@@ -32,9 +33,15 @@ const Signup = (props) => {
     return <Redirect to={`/`}/>
   }
 
+  if (user.loading) {
+      return <p> Loading..! </p>
+  }
+
+
   return(
     <Layout> 
         <Container> 
+            { user.message }
             <Row style={{marginTop: '50px'}}> 
                 <Col md={{span: 6, offset: 3}}> 
                     <Form onSubmit={userSignup}>
