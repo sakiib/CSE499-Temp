@@ -1,6 +1,7 @@
 import React from "react";
-import { Jumbotron } from "react-bootstrap";
+import { Jumbotron, Row, Col, Container } from "react-bootstrap";
 import Layout from "../../components/Layout";
+import './style.css';
 
 /**
  * @author SakibAlamin
@@ -10,7 +11,13 @@ import Layout from "../../components/Layout";
 const Home = (props) => {
   return (
     <Layout>
-      <Jumbotron
+      <Container fluid> 
+        <Row>
+          <Col md={2} className="sidebar"> Side Bar </Col>
+          <Col md={10} style={{ marginLeft: 'auto'}}> Container </Col>
+        </Row>
+      </Container>
+      {/* <Jumbotron
         style={{ margin: "5rem", background: "#fff" }}
         className="text-center"
       >
@@ -27,7 +34,7 @@ const Home = (props) => {
           infancy. Various versions have evolved over the years, sometimes by
           accident, sometimes on purpose (injected humour and the like).
         </p>
-      </Jumbotron>
+      </Jumbotron> */}
     </Layout>
   );
 };
